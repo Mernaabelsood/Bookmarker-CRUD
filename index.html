@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-dark-subtle">
+<div class="container m-auto">
+    
+    <h1 class="m-auto p-3 pb-3 text-muted">Bookmarker</h1>
+    <hr>
+    <h2 class=" text-center"> Bookmark Your Favourite Sites </h2>
+   
+    <label for="siteName"> Site Name </label>
+    <input type="text" class="form-control mb-3" placeholder="Bookmark Name" id="name">
+   
+    <label for="siteURL"> Site URL </label>
+    <input type="text" class="form-control mb-3" placeholder="Website URL" id="url"> 
+   
+    <div class="text-center" > 
+       <button class="btn px-4 btn-primary"id="addBtn" disabled onclick="addSite();">Submit </button>
+   </div>
+   <input onkeyup="search(this.value)" type="text" class="form-control my-3" placeholder="search">
+   <hr>
+    <table class="table text-center my-4">
+   
+       <thead> 
+           <th>Index</th>
+           <th>Visit</th>
+           <th>Update</th>
+           <th>Delete</th>
+           
+       </thead>
+   
+       <tbody id="tableBody"> </tbody>
+   
+    </table>
+
+</div>
+
+
+
+<script src="JS/bootstrap.bundle.min.js"></script>
+<script src="JS/main.js"></script>
+</body>
+</html>
