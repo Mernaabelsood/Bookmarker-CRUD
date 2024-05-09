@@ -51,23 +51,13 @@ function isUrlValid(){
     }
 
 function addSite() 
-{ 
- if (validate() == true) {
+{
    if (addBtn.innerHTML == "update") {
     addBtn.innerHTML = "Submit";
     var site ={
         name: nameInput.value ,
         url: urlInput.value 
     }
-
-    else {
-        alert(`Site Name or Url is not valid, Please follow the rules below :
-    -Site name must contain at least 3 characters
-    -Site URL must be a valid one`)
-    }
-   }
-
-  
 siteContainer.splice(mainIndex,1,site)
    } else {
     var site ={
@@ -138,13 +128,5 @@ function search(term){
     }
 display(wantedBook);
 }
-function validate() {
-    var websiteRegex = /^(https:\/\/)[a-zA-Z0-9\-/\.](\.com|\.net|\.to|\.eg)[a-zA-Z0-9\-/]$/
-    var nameRegex = /^[a-z ]{3,}$/
-    if (websiteRegex.test(urlInput.value) && nameRegex.test(nameInput.value) == true) {
-        return true
-    }
-    else {
-        return false
-    }
-}
+
+
