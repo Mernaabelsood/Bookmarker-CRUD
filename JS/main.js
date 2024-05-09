@@ -59,7 +59,15 @@ function addSite()
         name: nameInput.value ,
         url: urlInput.value 
     }
+
+    else {
+        alert(`Site Name or Url is not valid, Please follow the rules below :
+    -Site name must contain at least 3 characters
+    -Site URL must be a valid one`)
+    }
    }
+
+  
 siteContainer.splice(mainIndex,1,site)
    } else {
     var site ={
